@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="ProxyDebbuger" lang="en">
+    <head>
+        <title>Proxy Debbuger</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Angular Material CSS now available via Google CDN; version 0.10 used here -->
+        <link rel="stylesheet" href="vendor/angular-material.min.css">
+        <link rel="stylesheet" href="resources/css/main.css">
+        <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+    </head>
+    <body ng-controller="BaseController">
+        <md-content class="menu-floating">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>Proxy Debbuger</span>
+                    </h2>
+                    <span flex></span>
+                    <md-button ng-href="#/">Home</md-button>
+                </div>
+            </md-toolbar>
+        </md-content>
+
+        <ng-view></ng-view>
+
+        <!-- <script src="https://cdn.socket.io/socket.io-1.3.7.js"></script> -->
+        <script src="vendor/socket.io.js"></script>
+
+        <!-- Angular Material Dependencies -->
+        <script src="vendor/angular.min.js"></script>
+        <script src="vendor/angular-animate.min.js"></script>
+        <script src="vendor/angular-aria.min.js"></script>
+        <script src="vendor/angular-route.min.js"></script>
+        <script src="vendor/angular-resources.js"></script>
+
+        <!-- Angular Material Javascript now available via Google CDN; version 0.10 used here -->
+        <script src="vendor/angular-material.min.js"></script>
+
+        <script src="app/main.js"></script>
+        <script src="app/base/baseController.js"></script>
+        <script src="app/home/homeController.js"></script>
+
+    </body>
+</html>
