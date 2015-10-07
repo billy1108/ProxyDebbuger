@@ -1,0 +1,35 @@
+{
+    "name": "ProxyDebbuger",
+    "version": "0.0.1",
+    "description": "Hacking debbuger request for programmers",
+    "author": "Billy Caballero <billy.11080@gmail.com>",
+    "contributors": [{
+        "name": "Billy Caballero",
+        "email": "billy.11080@gmail.com"
+    }],
+    "scripts": {
+        "start": "node main.js"
+    },
+    "main": "main.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/billy1108/ProxyDebbuger"
+    },
+    "bugs": {
+        "url": "https://github.com/billy1108/ProxyDebbuger/issues"
+    },
+    "keywords": [
+        "proxy",
+        "hacking",
+        "debbuger",
+        "javascript",
+        "android"
+    ],
+    "dependencies": {
+        "hoxy": "3.1.2",
+        "colors" : "1.1.2"
+    },
+    "private": true,
+    "analyze": true,
+    "license": "MIT"
+}
