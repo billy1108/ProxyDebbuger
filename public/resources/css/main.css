@@ -1,0 +1,10 @@
+.content-no-request{
+	height: 300px;
+}
+
+.content-no-request span{
+	top: 45%;
+    position: absolute;
+    font-size: 48px;
+    left: 30%;
+}

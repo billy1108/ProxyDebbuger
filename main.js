@@ -64,7 +64,7 @@ proxy.intercept({
 	console.log(colors.cyan('URL =>' + req.url ));
 	console.log(colors.green('=============================================================='));
 	console.log(colors.cyan('JSON =>' + JSON.stringify(resp.json) ));
-	var param = { "url" : req.url, "data" : resp.json};
+	var param = { "json" : resp.json, "request": req._data };
 	io.sockets.emit("msg", param);
 });
 

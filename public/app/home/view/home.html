@@ -1,1 +1,69 @@
-home
+<div layout="row">
+	<div flex="30" >
+		<md-toolbar md-scroll-shrink ng-if="true">
+			<div class="md-toolbar-tools">
+				<h3>
+					<span>History</span>
+				</h3>
+			</div>
+		</md-toolbar>
+		<md-content flex>
+			<md-list ng-cloak>
+				<md-list-item  ng-click="showRequest(data, $event)" ng-repeat="data in requests">
+					<p flex="20" class="md-caption"> {{ data.request.method }} </p>
+					<p flex class="md-body-1"> {{ data.request.hostname }}{{ data.request.url }} </p>
+				</md-list-item>				
+			</md-list>
+		</md-content>
+	</div>
+
+	<div flex="70">
+		<md-toolbar md-scroll-shrink ng-if="true">
+			<div class="md-toolbar-tools">
+				<h3>
+					<span>Detail</span>
+				</h3>
+			</div>
+		</md-toolbar>
+		<md-content flex>
+			<div class="content-no-request" ng-if="!checked">
+				<span>
+				  	No request seleted
+				</span>
+			</div>
+			<div ng-if="checked" >
+				<div layout="row" layout-wrap>
+					<div flex="100">
+						URLLL
+					</div>
+					<div flex="100">
+						<div ng-cloak>
+							<md-content>
+								<md-tabs md-dynamic-height md-border-bottom>
+									<md-tab label="Body">
+										<md-content class="md-padding">
+											<pre class="jsonBox">
+												<code class="highlight"	>
+													{{ requestJson }}
+												</code>
+											</pre>
+										</md-content>
+									</md-tab>
+									<md-tab label="Headers">
+										<md-content class="md-padding">
+											
+										</md-content>
+									</md-tab>
+								</md-tabs>
+							</md-content>
+						</div>
+					</div>
+				</div>
+			</div>
+		</md-content>
+	</div>
+</div>
+
+
+
+
