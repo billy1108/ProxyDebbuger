@@ -8,3 +8,44 @@
     font-size: 48px;
     left: 30%;
 }
+
+
+.content-headers-history{
+	background-color: whitesmoke;
+	overflow: hidden;
+}
+
+.content-headers-history div{
+	font-size: 13px;
+    height: 37px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.content-headers-history div:first-child { 
+    text-align: center;
+    font-size: 10px;
+    color: #009688;
+}
+
+.content-headers{
+	margin: 5px;
+    background-color: whitesmoke;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.content-headers .method-special{
+	background-color: #009688 !important;
+}
+
+.content-headers div{
+	display: inline-flex;
+    padding: 7px;
+}
+
+.content-headers div:first-child { 
+    background-color: #448AFF;
+    color: white;
+    font-weight: bold;
+}

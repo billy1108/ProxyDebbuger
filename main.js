@@ -60,13 +60,29 @@ proxy.intercept({
   	mimeType: 'application/json',
 	as: 'json'
 }, function(req, resp, cycle) {
+	var param = buildMessage(resp, req);
+	io.sockets.emit("msg", param);
+
 	console.log(colors.rainbow('***************************************************************'));
 	console.log(colors.cyan('URL =>' + req.url ));
 	console.log(colors.green('=============================================================='));
-	console.log(colors.cyan('JSON =>' + JSON.stringify(resp.json) ));
-	var param = { "json" : resp.json, "request": req._data };
-	io.sockets.emit("msg", param);
+	console.log(colors.cyan('JSON =>' + JSON.stringify(param) ));
+
 });
+
+
+function buildMessage(resp, req){
+	return {
+		"json": resp.json,
+		"headers": req._data.headers,
+		"protocol": req._data.protocol,
+		"hostname": req._data.hostname,
+		"port": req._data.port,
+		"method": req._data.method,
+		"url": req._data.url,
+		"status" : resp._data.statusCode
+	}
+}
 
 /**
 * Listening Servers

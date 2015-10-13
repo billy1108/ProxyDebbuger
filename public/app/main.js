@@ -3,7 +3,7 @@ var app = angular.module('ProxyDebbuger', ['ngMaterial', 'ngRoute', 'ngAnimate',
 app.config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
         .primaryPalette('teal')
-        .accentPalette('orange')
+        .accentPalette('blue')
         .warnPalette('red');
 });
 
